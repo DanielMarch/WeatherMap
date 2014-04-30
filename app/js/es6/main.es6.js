@@ -67,9 +67,10 @@
     'type': 'serial',
     'theme': 'none',
     'pathToImages': 'http://www.amcharts.com/lib/3/images/',
-    'legend': {
-        'useGraphSettings': true
-    },
+    'titles': [{
+        'text': zip,
+        'size': 15
+    }],
     'dataProvider': [],
     'valueAxes': [{
         'id':'v1',
