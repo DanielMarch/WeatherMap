@@ -21,10 +21,10 @@
     if(zip.length === 5){
       show();
       getWeather();
+      makeChart();
     }else{
       alert('Enter Valid Zipcode');
     }
-    makeChart();
   }
 
   function getWeather(){
@@ -35,16 +35,6 @@
   function weather(conditions){
     conditions.forecast.simpleforecast.forecastday.forEach(m=>chart.dataProvider.push({high:m.high.fahrenheit, low:m.low.fahrenheit, date:m.date.weekday_short}));
     chart.validateData();
-    // let loop = conditions.forecast.simpleforecast.forecastday;
-    // let weatherTen = {};
-    // for(var i = 0; i < loop.length; i++){
-    //   weatherTen.high = loop[i].high.fahrenheit;
-    //   weatherTen.low = loop[i].low.fahrenheit;
-    //   weatherTen.date = loop[i].date.weekday_short;
-    //   chart.dataProvider.push(weatherTen);
-    //   chart.validateData();
-    //   console.log(weatherTen);
-    // }
   }
 
   function initMap(lat, lng, zoom){
