@@ -1,0 +1,12 @@
+html,
+body {
+  height: 100%;
+}
+#map {
+  height: 50%;
+  width: 50%;
+}
+#graph {
+  width: 50%;
+  height: 50%;
+}
